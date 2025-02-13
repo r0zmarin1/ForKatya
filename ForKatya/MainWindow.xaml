@@ -1,0 +1,22 @@
+﻿<Window x:Class="ForKatya.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ForKatya"
+        mc:Ignorable="d"
+        Title="сюрприз" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="для катеньки!" FontSize="30" Foreground="LightPink" HorizontalContentAlignment="Center"/>
+            <Label Content="введи пароль ^^" FontSize="30" Foreground="LightPink" HorizontalContentAlignment="Center"/>
+            <TextBox Foreground="LightPink" FontSize="30" x:Name="PasswordBox" Margin="10"/>
+            <Button Content="войти :3" Background="LightPink" Margin="10" FontSize="30" Click="OpenLoveWindow"/>
+        </StackPanel>
+    </Grid>
+</Window>

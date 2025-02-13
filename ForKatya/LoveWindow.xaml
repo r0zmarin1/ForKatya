@@ -1,0 +1,49 @@
+﻿<Window x:Class="ForKatya.LoveWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ForKatya"
+        mc:Ignorable="d"
+        Title="LoveWindow" MinHeight="450" MinWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="700" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ScrollViewer>
+            <ListBox ItemsSource="{Binding Reasons}" SelectedItem="{Binding Reason}" MouseDoubleClick="ChooseValentine" HorizontalContentAlignment="Center" VerticalAlignment="Center" BorderThickness="0">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border CornerRadius="9" Padding="5" BorderThickness="1" BorderBrush="Black" Width="600"  Background="LightPink" HorizontalAlignment="Center" >
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                                    <Label Content="{Binding Number}" FontSize="30" FontFamily="Vasek" Margin="10"/>
+                                    <Label Content=" - " FontSize="30" FontFamily="Vasek" Margin="10"/>
+                                    <Label Content="{Binding Title}" FontSize="30" FontFamily="Vasek" Margin="10"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding Description}" Grid.Row="1" FontSize="30" FontFamily="Vasek" HorizontalAlignment="Center"/>
+                            </Grid>
+
+                        </Border>
+
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+            <Image Source="/Images/me.jpg" Width="300" Height="200" Margin="10" Stretch="Uniform"/>
+            <Label Content="кликни!" FontSize="40" Foreground="LightPink" HorizontalContentAlignment="Center" FontFamily="Vasek"/>
+            <Label Content="↓" FontSize="30" Foreground="LightPink" HorizontalContentAlignment="Center"/>
+            <Button Content="💕" Click="ClickLove" Width="50" FontSize="30" Background="LightPink"/>
+            <Label Content="{Binding LovePoints}" FontSize="40" Foreground="LightPink" HorizontalContentAlignment="Center" FontFamily="Vasek"/>
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>

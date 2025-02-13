@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>price_discount_valentine_love_sale_heart_offer_romantic_icon_262456.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\hehehe.mp3" />
+    <None Remove="Images\me.jpg" />
+    <None Remove="Images\rizz.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\hehehe.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="price_discount_valentine_love_sale_heart_offer_romantic_icon_262456.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\me.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Images\rizz.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
