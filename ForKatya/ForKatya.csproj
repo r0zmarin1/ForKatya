@@ -12,11 +12,15 @@
   <ItemGroup>
     <None Remove="Images\hehehe.mp3" />
     <None Remove="Images\me.jpg" />
+    <None Remove="Images\net-idi-na.mp3" />
     <None Remove="Images\rizz.mp3" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Images\hehehe.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\net-idi-na.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="price_discount_valentine_love_sale_heart_offer_romantic_icon_262456.ico" />

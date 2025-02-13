@@ -16,7 +16,7 @@ namespace ForKatya
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        private MediaPlayer mediaPlayer = new MediaPlayer();
         public MainWindow()
         {
             InitializeComponent();
@@ -33,7 +33,22 @@ namespace ForKatya
             }
             else
             {
+                string musicFilePath = "Images/net-idi-na.mp3";
+                PlayMusic(musicFilePath);
                 MessageBox.Show("ты пыталась:( попробуй еще!", "ну же!!");
+            }
+        }
+
+        private void PlayMusic(string musicFilePath)
+        {
+            try
+            {
+                mediaPlayer.Open(new Uri(musicFilePath, UriKind.Relative));
+                mediaPlayer.Play();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при загрузке музыки: {ex.Message}");
             }
         }
     }
