@@ -14,6 +14,7 @@
     <None Remove="Images\me.jpg" />
     <None Remove="Images\net-idi-na.mp3" />
     <None Remove="Images\rizz.mp3" />
+    <None Remove="Vasek Italic.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +29,9 @@
 
   <ItemGroup>
     <Resource Include="Images\me.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Vasek Italic.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="Images\rizz.mp3">
