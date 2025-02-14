@@ -6,6 +6,11 @@
         xmlns:local="clr-namespace:ForKatya"
         mc:Ignorable="d"
         Title="сюрприз" Height="450" Width="800">
+    <Window.Resources>
+        <FontFamily x:Key="lol" >
+            pack://application:,,,/Vasek.ttf#Vasek Italic
+        </FontFamily>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -13,7 +18,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Label Content="для катеньки!" FontSize="30" Foreground="LightPink" HorizontalContentAlignment="Center"/>
+            <Label Content="для катеньки!" FontSize="30" Foreground="LightPink" HorizontalContentAlignment="Center"  />
             <Label Content="введи пароль ^^" FontSize="30" Foreground="LightPink" HorizontalContentAlignment="Center"/>
             <TextBox Foreground="LightPink" FontSize="30" x:Name="PasswordBox" Margin="10"/>
             <Button Content="войти :3" Background="LightPink" Margin="10" FontSize="30" Click="OpenLoveWindow"/>
